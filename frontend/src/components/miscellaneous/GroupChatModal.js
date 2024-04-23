@@ -155,7 +155,7 @@ const GroupChatModal = ({ children }) => {
             </FormControl>
             <FormControl>
               <Input
-                placeholder="Add Users eg: John, Piyush, Jane"
+                placeholder="Add Users eg: nisha, user, lalwani"
                 mb={1}
                 onChange={(e) => handleSearch(e.target.value)}
               />
@@ -178,7 +178,8 @@ const GroupChatModal = ({ children }) => {
                 .map((user) => (
                   <UserListItem
                     key={user._id}
-                    user={user}
+                    userName={user.name}
+                    userEmail={user.email}
                     handleFunction={() => handleGroup(user)}
                   />
                 ))
